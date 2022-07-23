@@ -153,7 +153,7 @@ a:not([button]) {
 
 .code-font {
   font-size: var(--small-font);
-  font-size: 400;
+  font-weight: 400;
   line-height: 1;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -164,10 +164,6 @@ a:not([button]) {
 
 .Flow-Rounded {
   font-family: "Flow Rounded", cursive;
-}
-
-.Flow-Block {
-  font-family: "Flow Block", cursive;
 }
 
 .Flow-Circular {
@@ -205,6 +201,7 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   overflow-y: overlay;
+  background-color: #1f1f1f;
 }
 body .Container {
   margin-inline: auto;
@@ -274,7 +271,7 @@ button,
 
 :root {
   --Header-hight: 8rem;
-  --Header-Nav-width: 10em;
+  --Header-Nav-gap: 2rem;
   --Header-icon-hight: 3rem;
 }
 
@@ -309,7 +306,6 @@ header .Container .Logo a img {
 }
 header .Container nav {
   font-size: var(--small-font);
-  width: var(--Header-Nav-width);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -320,7 +316,7 @@ header .Container nav ul {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: var(--Header-Nav-gap);
 }
 header .Container nav ul li a {
   color: var(--dark-test-color);
@@ -340,28 +336,27 @@ header .Container nav ul li a:hover {
 }
 
 :root {
-  --shape-template-width: 90%;
-  --shape-template-head-width: 10%;
+  --shape-template-width: 100%;
+  --shape-template-head-hight: 10%;
+  --shape-border-radius: 15px;
   --shape-template-buttons-width: 3%;
-  --shape-body-padding: 10%;
+  --shape-body-padding: 1rem;
   --shape-body-side-par-width: 30%;
 }
 
-[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .shape-template .shape-template-head :nth-child(3), [aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .shape-template .shape-template-head :nth-child(2), [aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .shape-template .shape-template-head :nth-child(1), [aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .shape-template {
+[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .shape-template-head :nth-child(3), [aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .shape-template-head :nth-child(2), [aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .shape-template-head :nth-child(1) {
   box-shadow: 20px 20px 20px 0px hsla(0deg, 0%, 0%, 0.4);
 }
 
 section {
   width: 100vw;
   height: 100vh;
-  border: 5px solid blue;
 }
 
 [aria-labelledby=Introduction-to-page] {
   width: 100vw;
   height: calc(100vh - var(--Header-hight));
   height: 100vh;
-  border: 5px solid red;
 }
 [aria-labelledby=Introduction-to-page] .Container {
   height: 100%;
@@ -371,6 +366,7 @@ section {
   height: 100%;
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 [aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Text,
 [aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star {
@@ -379,7 +375,7 @@ section {
 }
 @media screen and (max-width: 769px) {
   [aria-labelledby=Introduction-to-page] .Container .Hero {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   [aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Text,
 [aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star {
@@ -392,101 +388,104 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-right: 2rem;
 }
 [aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  perspective: 1000px;
-}
-[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .shape-template {
-  width: var(--shape-template-width);
-  aspect-ratio: 16/13;
-  position: absolute;
-  display: grid;
-  grid-template-rows: var(--shape-template-head-width) 1fr;
-  overflow: hidden;
-  transform: rotateY(330deg);
-  border-radius: 15px;
-  background-color: blue;
-}
-[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .shape-template .shape-template-head {
-  grid-row: 1/2;
-  padding: var(--shape-template-buttons-width);
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: var(--shape-template-buttons-width);
-  background-color: red;
-}
-[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .shape-template .shape-template-head span {
-  display: block;
-  width: var(--shape-template-buttons-width);
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-}
-[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .shape-template .shape-template-head :nth-child(1) {
-  background-color: #86f681;
-}
-[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .shape-template .shape-template-head :nth-child(2) {
-  background-color: #fcd378;
-}
-[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .shape-template .shape-template-head :nth-child(3) {
-  background-color: #f07580;
-}
-[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .shape-template .shape-body {
-  grid-row: 2/3;
-}
-[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .code-stage {
-  z-index: 1;
-}
-[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .code-stage .shape-body {
-  display: grid;
-  grid-template-columns: var(--shape-body-side-par-width) 1fr;
-}
-[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .code-stage .shape-body .shape-body-side-par {
-  overflow-x: hidden;
-  grid-column: 1/2;
-  background-color: rosybrown;
-  padding: var(--shape-body-padding);
-}
-[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .code-stage .shape-body .shape-body-content {
-  overflow-x: hidden;
-  grid-column: 2/3;
-  background-color: blueviolet;
-  padding: var(--shape-body-padding);
-}
-[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .design-stage {
-  z-index: 2;
-  transform: translateX(-2rem) translateY(-2rem) rotateY(330deg);
-}
-[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .final-stage {
-  z-index: 3;
-  transform: translateX(-4rem) translateY(-4rem) rotateY(330deg);
-}
-
-.test {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.test .code .block {
-  grid-row: 2/3;
+[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .full-web-stage {
+  width: var(--shape-template-width);
+  aspect-ratio: 9/6;
+  position: relative;
+  background-color: red;
+  border-radius: var(--shape-border-radius);
+}
+[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .full-web-stage .phone-stage {
+  width: 30%;
+  aspect-ratio: 2/5;
+  position: absolute;
+  bottom: -40%;
+  right: -10%;
+  border-radius: var(--shape-border-radius);
+  background-color: blue;
+}
+[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .full-web-stage .code-stage {
+  width: 60%;
+  aspect-ratio: 9/6;
+  position: absolute;
+  bottom: -10%;
+  left: -10%;
+  border-radius: var(--shape-border-radius);
+  background-color: #191919;
+}
+[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .full-web-stage .code-stage .shape-template-body {
   display: grid;
-  grid-template-columns: 30% 1fr;
+  grid-template-columns: var(--shape-body-side-par-width) 1fr;
+  overflow: hidden;
+  gap: 1rem;
+  padding: 1rem;
 }
-.test .code .block .side {
+[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .full-web-stage .code-stage .shape-template-body .code-stage-side-par {
   grid-column: 1/2;
-  background-color: rosybrown;
-  padding: 5%;
+  word-break: break-all;
+  overflow: hidden;
+  z-index: 2;
 }
-.test .code .block .center {
+[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .full-web-stage .code-stage .shape-template-body .code-stage-side-par .code-font {
+  background-color: #242424;
+  border-radius: var(--shape-border-radius);
+  margin: 1rem 0;
+  padding: 1rem;
+}
+[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .full-web-stage .code-stage .shape-template-body .code-stage-content {
   grid-column: 2/3;
-  background-color: blueviolet;
-  padding: 5%;
+  word-break: break-all;
+  overflow: hidden;
+  z-index: 1;
+}
+[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .full-web-stage .code-stage .shape-template-body .code-stage-content .code-font {
+  background-color: #242424;
+  border-radius: var(--shape-border-radius);
+  margin: 1rem 0;
+  padding: 1rem;
+}
+[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .shape-template-head {
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: var(--shape-template-buttons-width);
+  gap: var(--shape-template-buttons-width);
+  border-top-left-radius: var(--shape-border-radius);
+  border-top-right-radius: var(--shape-border-radius);
+  background-color: #191919;
+}
+[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .shape-template-head span {
+  display: block;
+  width: var(--shape-template-buttons-width);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .shape-template-head :nth-child(1) {
+  background-color: #86f681;
+}
+[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .shape-template-head :nth-child(2) {
+  background-color: #fcd378;
+}
+[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .shape-template-head :nth-child(3) {
+  background-color: #f07580;
+}
+[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .shape-template-body {
+  height: 85%;
+  width: 100%;
+}
+[aria-labelledby=Introduction-to-page] .Container .Hero .Hero-Star .shape-template-footer {
+  height: 5%;
+  width: 100%;
 }
 
 footer {
@@ -537,7 +536,7 @@ footer .mine p a {
     font-size: 18px;
   }
   .Container {
-    width: 95%;
+    width: 80%;
   }
 }
 /*For 4K */
@@ -573,9 +572,6 @@ footer .mine p a {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-  }
-  [aria-labelledby=Introduction-to-page] {
-    height: 200vh;
   }
   button,
 [button],
