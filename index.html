@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="#" />
 		<meta name="author" content="Yousef Hafnawi" />
-		<meta name="color-scheme" content="light dark" />
-		<title>Yousef_hafnawi</title>
+		<meta name="color-scheme" content="dark" />
+		<title>Yousef hafnawi</title>
 		<link rel="stylesheet" href="./style.css" />
 		<!-- ################ scripts ################ -->
 		<!-- ################ gsap ################ -->
@@ -24,6 +24,13 @@
 			defer
 		></script>
 		<!-- ################ fonts ################ -->
+		<!-- font is (Roboto) main -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+			rel="stylesheet"
+		/>
 		<!-- font is (Flow Circular) used in Hero star -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,234 +45,201 @@
 			href="https://fonts.googleapis.com/css2?family=Flow+Rounded&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="icon" type="image/png" href="./logo.png" />
 	</head>
 	<body class="body-loding-animation">
-		<div class="loding-animation"></div>
-		<main data-scroll-container>
-			<header>
-				<div class="Container">
-					<div class="Logo">
-						<a href="/index.html">
-							<img
-								src="./assets/images/svg/logo-bookmark.svg"
-								alt="homepage logo"
-							/>
-						</a>
+		<div id="loding-animation"></div>
+		<div class="hire-me-info none"></div>
+		<div class="info none"></div>
+		<!-- header section starts -->
+		<header>
+			<div class="Container">
+				<a class="Logo" href="./index.html">
+					<div class="logo-icon">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
 					</div>
-					<nav>
-						<ul>
-							<li>
-								<a href="#"
-									><img
-										src="./assets/images/svg/icon-error.svg"
-										alt=""
-								/></a>
-							</li>
-							<li><a href="#">About mee</a></li>
-							<li><button type="button">Login</button></li>
-						</ul>
-					</nav>
-				</div>
-			</header>
-			<!-- header section ends -->
+				</a>
+				<nav>
+					<ul>
+						<li>
+							<a href="#"
+								><img
+									src="./assets/images/svg/icon-error.svg"
+									alt=""
+							/></a>
+						</li>
+						<li><a href="#">About Me</a></li>
+						<li><button type="button">Login</button></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<!-- header section ends -->
+		<main data-scroll-container>
 			<!-- Hero section starts -->
-			<section aria-labelledby="Introduction-to-page">
+			<section aria-labelledby="Introduction-to-page" data-scroll-section>
+				<div class="bg-icon">
+					<img
+						src="./assets/images/img/Hero/bc-icon/megaphone.png"
+						alt=""
+						class="megaphone-icon"
+					/>
+					<img
+						src="./assets/images/img/Hero/bc-icon/brain.png"
+						alt=""
+						class="brain-icon"
+					/>
+					<img
+						src="./assets/images/img/Hero/bc-icon/hand1.png"
+						alt=""
+						class="hand1"
+					/>
+				</div>
 				<div class="Container">
 					<div class="Hero">
 						<div class="Hero-Text">
-							<p>Hi, I am Yousef Hafnawi</p>
-							<h1>
-								Front-End developer specialist in making people
-								dream project
+							<h1
+								class="gradient-text1"
+								data-scroll
+								data-scroll-speed="2"
+							>
+								I am Front-End developer,
+								<span
+									class="gradient-text2"
+									data-scroll
+									data-scroll-speed="3"
+									>Dream project specialist</span
+								>
 							</h1>
-							<button>Hire Me</button>
-						</div>
-						<div class="Hero-Star">
-							<div class="full-web-stage">
-								<div class="shape-template-head">
-									<span></span>
-									<span></span>
-									<span></span>
-								</div>
-								<div class="shape-template-body"></div>
-								<div class="shape-template-footer"></div>
 
-								<div class="phone-stage"></div>
-								<div class="code-stage">
-									<div class="shape-template-head">
-										<span></span>
-										<span></span>
-										<span></span>
-									</div>
-									<div class="shape-template-body">
-										<div class="code-stage-side-par">
-											<div class="code-font">
-												<span class="Flow-Rounded">
-													ectetur dolor erw
-												</span>
-												<span class="Flow-Circular"
-													>ipsum dolor</span
-												>
-											</div>
-											<div class="code-font">
-												<span class="Flow-Rounded">
-													ectetur dolor
-												</span>
-												<span class="Flow-Circular"
-													>ipsum dolor</span
-												>
-											</div>
-											<div class="code-font">
-												<span class="Flow-Rounded">
-													ectetur dolor
-												</span>
-												<span class="Flow-Circular"
-													>ipsum dolor</span
-												>
-											</div>
-										</div>
-										<div class="code-stage-content">
-											<div class="code-font">
-												<span class="Flow-Rounded">
-													ectetur dolor ectetur dolor
-												</span>
-												<span class="Flow-Circular"
-													>ipsum dolor</span
-												>
-											</div>
-											<div class="code-font">
-												<span class="Flow-Rounded">
-													ectetur dolor ectetur dolor
-												</span>
-												<span class="Flow-Circular"
-													>ipsum dolor</span
-												>
-											</div>
-											<div class="code-font">
-												<span class="Flow-Rounded">
-													ectetur dolor ectetur dolor
-												</span>
-												<span class="Flow-Circular"
-													>ipsum dolor</span
-												>
-											</div>
-											<div class="code-font">
-												<span class="Flow-Rounded">
-													ectetur dolor ectetur dolor
-												</span>
-												<span class="Flow-Circular"
-													>ipsum dolor</span
-												>
-											</div>
-											<div class="code-font">
-												<span class="Flow-Rounded">
-													ectetur dolor ectetur dolor
-												</span>
-												<span class="Flow-Circular"
-													>ipsum dolor</span
-												>
-											</div>
-										</div>
-									</div>
-									<div class="shape-template-footer"></div>
-								</div>
-							</div>
-
-							<!-- <div class="shape-template code-stage">
-								<div class="shape-template-head">
-									<span></span>
-									<span></span>
-									<span></span>
-								</div>
-								<div class="shape-body">
-									<div class="shape-body-side-par">
-										<div>
-											<p class="code-font Flow-Rounded">
-												Lorem
-												<span class="Flow-Circular"
-													>ipsum dolor</span
-												>
-												sit amet cons ectetur adipi
-												sicing elit.
-											</p>
-											<p class="code-font Flow-Circular">
-												Lorem ipsum
-												<span class="Flow-Rounded"
-													>ipsum dolor ipsum
-													dolor</span
-												>
-												dolor sit amet cons ectetur
-												adipi sicing
-											</p>
-										</div>
-									</div>
-									<div class="shape-body-content">
-										<div>
-											<p class="code-font Flow-Rounded">
-												Lorem ipsum
-												<span class="Flow-Circular"
-													>ipsum dolor ipsum
-													dolor</span
-												>
-												dolor sit a<span
-													class="Flow-Rounded"
-													>ipsum dolor</span
-												>met conse ctetur adipis icing
-												elit. Sint expedita
-												<span class="Flow-Circular"
-													>ipsum dolor</span
-												>
-												dele niti recus andae nemo ut
-											</p>
-											<p class="code-font Flow-Circular">
-												Lorem ipsum dolor sit amet
-												consec tetur
-												<span class="Flow-Rounded"
-													>ipsum dolor</span
-												>
-												adipi sicing elit. Sint exped
-												ita dele niti recu sandae nemo
-												ut
-											</p>
-											<p class="code-font Flow-Rounded">
-												<span class="Flow-Circular"
-													>ipsum dolor</span
-												>
-												Lorem ipsum
-												<span
-													class="Flow-Circular"
-												></span>
-												dolor sit am<span
-													class="Flow-Rounded"
-													>ipsum dolor</span
-												>et conse ctetur adipis icing
-												elit. Sint expedi ta del eniti
-												<span class="Flow-Circular"
-													>ipsum dolor
-												</span>
-												recusanda<span
-													class="Flow-Rounded"
-													>ipsum dolor</span
-												>e nemo ut nemo ut nemo utnemo
-											</p>
-										</div>
-									</div>
-								</div>
-							</div> -->
-							<!-- <div class="shape-template design-stage"></div>
-							<div class="shape-template final-stage"></div> -->
+							<button class="hire-me">Hire Me</button>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="test">
-				<div class="mc">
-					<div class="mob"></div>
-					<div class="code"></div>
+			<!-- <section aria-labelledby="sections-of-page" data-scroll-section>
+				<div class="Container">
+					<div class="cards">
+						<div class="shopping">
+							<img
+								src="./assets/images/img/Hero/shopping-trolley.jpg"
+								alt=""
+							/>
+						</div>
+						<div class="globe">
+							<img
+								src="./assets/images/img/Hero/globe.jpg"
+								alt=""
+							/>
+						</div>
+						<div class="space-ship">
+							<img
+								src="./assets/images/img/Hero/space-ship.jpg"
+								alt=""
+							/>
+						</div>
+						<div class="briefcase">
+							<img
+								src="./assets/images/img/Hero/briefcase-3440960-2888134.png"
+								alt=""
+							/>
+						</div>
+						<div class="target">
+							<img
+								src="./assets/images/img/Hero/target.png"
+								alt=""
+							/>
+						</div>
+					</div>
 				</div>
-			</section>
-			<section></section>
-			<section></section>
+			</section> -->
+			<!-- <section>
+				<div class="code-stage">
+					<div class="code-icon">
+						<img
+							src="./assets/images/img/Hero/hero-star/code-stage/documents(1).jpg"
+							alt=""
+						/>
+						<img
+							src="./assets/images/img/Hero/hero-star/code-stage/checklist(2).jpg"
+							alt=""
+						/>
+						<img
+							src="./assets/images/img/Hero/hero-star/code-stage/website-3d(3).jpg"
+							alt=""
+						/>
+						<img
+							src="./assets/images/img/Hero/hero-star/code-stage/full-website(4).jpg"
+							alt=""
+						/>
+					</div>
+
+					<div class="shape-template-head">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<div class="shape-template-body">
+						<div class="code-stage-side-par">
+							<div class="code-font">
+								<span class="Flow-Rounded">
+									ectetur dolor erw
+								</span>
+								<span class="Flow-Circular">ipsum dolor</span>
+							</div>
+							<div class="code-font">
+								<span class="Flow-Rounded">
+									ectetur dolor
+								</span>
+								<span class="Flow-Circular">ipsum dolor</span>
+							</div>
+							<div class="code-font">
+								<span class="Flow-Rounded">
+									ectetur dolor
+								</span>
+								<span class="Flow-Circular">ipsum dolor</span>
+							</div>
+						</div>
+						<div class="code-stage-content">
+							<div class="code-font">
+								<span class="Flow-Rounded">
+									ectetur dolor ectetur dolor
+								</span>
+								<span class="Flow-Circular">ipsum dolor</span>
+							</div>
+							<div class="code-font">
+								<span class="Flow-Rounded">
+									ectetur dolor ectetur dolor
+								</span>
+								<span class="Flow-Circular">ipsum dolor</span>
+							</div>
+							<div class="code-font">
+								<span class="Flow-Rounded">
+									ectetur dolor ectetur dolor
+								</span>
+								<span class="Flow-Circular">ipsum dolor</span>
+							</div>
+							<div class="code-font">
+								<span class="Flow-Rounded">
+									ectetur dolor ectetur dolor
+								</span>
+								<span class="Flow-Circular">ipsum dolor</span>
+							</div>
+							<div class="code-font">
+								<span class="Flow-Rounded">
+									ectetur dolor ectetur dolor
+								</span>
+								<span class="Flow-Circular">ipsum dolor</span>
+							</div>
+						</div>
+					</div>
+					<div class="shape-template-footer"></div>
+				</div>
+			</section> -->
 		</main>
 		<script type="module" src="./script/LocomotiveConfig.js"></script>
 		<script type="module" src="./script/Gsap.js"></script>

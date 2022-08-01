@@ -1,3 +1,17 @@
+let hireButton = document.querySelector(".hire-me");
+let hire = document.querySelector(".hire-me-info");
+let hireInfo = document.querySelector(".info");
+
+hireButton.onclick = function () {
+	hire.classList.toggle("none");
+	hireInfo.classList.toggle("none");
+};
+
+hire.onclick = function () {
+	hire.classList.toggle("none");
+	hireInfo.classList.toggle("none");
+};
+
 // ////////////////////////////////////////////////////////////////////////
 // function toggle(Butt1, Class1, Butt2, Class2) {
 // 	Butt1.classList.toggle(Class1);
